@@ -23,9 +23,9 @@
                 <form action="/login" method="post">
                     @csrf
                     <div class="form-floating">
+                        <label for="username"></label>
                         <input type="username" name="username" class="form-control @error('username') is-invalid @enderror"
-                            id="username" placeholder="name@example.com" value="{{ old('username') }}">
-                        <label for="username">username</label>
+                            id="username">
                         @error('username')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -33,9 +33,8 @@
                         @enderror
                     </div>
                     <div class="form-floating">
-                        <input type="password" name="password" class="form-control mt-2" id="password"
-                            placeholder="Password">
                         <label for="password">Password</label>
+                        <input type="password" name="password" class="form-control mt-2" id="password">
                     </div>
 
                     <button class="btn  btn-primary text-center mt-3 " type="submit">Log in</button>
