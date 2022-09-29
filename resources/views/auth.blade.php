@@ -23,7 +23,6 @@
                 <form action="/login" method="post">
                     @csrf
                     <div class="form-floating">
-                        <label for="username"></label>
                         <input type="username" name="username" class="form-control @error('username') is-invalid @enderror"
                             id="username">
                         @error('username')
@@ -33,7 +32,6 @@
                         @enderror
                     </div>
                     <div class="form-floating">
-                        <label for="password">Password</label>
                         <input type="password" name="password" class="form-control mt-2" id="password">
                     </div>
 
